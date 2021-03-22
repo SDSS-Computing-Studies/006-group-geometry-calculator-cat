@@ -65,7 +65,7 @@ def rectangle_area (l):
     print("Area of Rectangle is :", end = "")
     return l[0]*l[1]
 
-def tangle_primieter (l):
+def triangle_perimeter (l):
     print("Primieter of Triangle is :", end = "")
     return l[0]+l[1]+l[2]
 
@@ -86,6 +86,8 @@ def main():
     instructions()
     option = int(input())
     while option!= 9:
+        shape = shape_list[option - 1]
+        input_list = getInputs(getParams(shape))
         if option == 1:
             print(rectangle_area(input_list))
         elif option == 2:
